@@ -17,9 +17,11 @@ ENV PATH="/usr/lib/dart/bin:${PATH}"
 # Uygulamanız için çalışma dizinini belirleyin
 WORKDIR /app
 
+
 # Uygulama kodunuzu kopyalayın
 COPY . .
 
+RUN pub get
 # Bağımlılıkları yüklemek için alternatif bir yöntem kullanma
 # Örnek olarak:
 # RUN dart pubspec.yaml get
